@@ -1,0 +1,74 @@
+{
+    "lib": {
+        "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+    },
+    "handle": {
+        "type": "Buffer",
+        "data": [
+            2,
+            0,
+            0,
+            0
+        ]
+    },
+    "session": {
+        "lib": {
+            "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+        },
+        "handle": {
+            "type": "Buffer",
+            "data": [
+                41,
+                4,
+                18,
+                253
+            ]
+        },
+        "slot": {
+            "lib": {
+                "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+            },
+            "handle": {
+                "type": "Buffer",
+                "data": [
+                    1,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "module": {
+                "lib": {
+                    "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+                },
+                "libFile": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll",
+                "libName": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll",
+                "cryptokiVersion": {
+                    "major": 2,
+                    "minor": 40
+                },
+                "manufacturerID": "Feitian Technologies Co., Ltd.",
+                "libraryDescription": "EnterSafe PKCS#11 Library.",
+                "flags": 0,
+                "libraryVersion": {
+                    "major": 1,
+                    "minor": 20
+                }
+            },
+            "slotDescription": "FS USB Token 0",
+            "manufacturerID": "EnterSafe",
+            "flags": 7,
+            "hardwareVersion": {
+                "major": 1,
+                "minor": 0
+            },
+            "firmwareVersion": {
+                "major": 1,
+                "minor": 0
+            }
+        },
+        "state": 3,
+        "flags": 6,
+        "deviceError": 0
+    }
+}

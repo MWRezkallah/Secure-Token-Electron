@@ -1,0 +1,71 @@
+{
+  "name": "user_driver",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "description APP",
+  "author": {
+    "name": "abdalah",
+    "email": "abdalahshaban@yahoo.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "electron-builder install-app-deps",
+    "start": "nodemon app.js",
+    "start:electron": "electron .",
+    "electron": "tsc -p tsconfig.serve.json && electron .",
+    "build:electron": "rm -rf app-exe && rm -rf win-build  && tsc -p tsconfig.serve.json && node build.js"
+  },
+  "build": {
+    "appId": "com.ISEC.app",
+    "productName": "User Driver",
+    "directories": {
+      "output": "./win-build"
+    },
+    "compression": "normal",
+    "extraResources": "./lib",
+    "win": {
+      "icon": "./assets/img/login.ico",
+      "artifactName": "User Driver",
+      "target": [
+        {
+          "target": "msi"
+        }
+      ]
+    },
+    "msi": {
+      "perMachine": true,
+      "oneClick": false
+    }
+  },
+  "keywords": [],
+  "license": "ISCE",
+  "dependencies": {
+    "asn1js": "^2.0.26",
+    "auto-launch": "^5.0.5",
+    "axios": "^0.21.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "electron-reload": "^1.5.0",
+    "express": "^4.17.1",
+    "graphene-pk11": "^2.2.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "node-webcrypto-p11": "^2.3.5",
+    "pkijs": "^2.1.93",
+    "pvutils": "^1.0.17",
+    "usb-detection": "^4.10.0"
+  },
+  "devDependencies": {
+    "@bitdisaster/exe-icon-extractor": "^1.0.10",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-wix": "^6.0.0-beta.54",
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1",
+    "electron-builder-squirrel-windows": "^22.10.4",
+    "electron-packager": "^15.2.0",
+    "electron-rebuild": "^2.3.2",
+    "electron-wix-msi": "^3.0.4",
+    "path": "^0.12.7"
+  }
+}
