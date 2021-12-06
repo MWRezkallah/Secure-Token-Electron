@@ -7,8 +7,21 @@ const { tokenAPI } = require('./components/token')
 
 const app = express()
 // const server = http.createServer(app)
+//app.use(cors({ credentials: true, origin: '*' }))
+//app.use(cors({ credentials: true, origin: 'http://192.168.1.50:4200' }))
 
-app.use(cors({ credentials: true, origin: 'http://localhost:4200' }))
+//const allowlist = ['http://192.168.1.50:4200', 'http://localhost:4200']
+app.use(
+  cors({
+    origin: ['http://192.168.1.50:4200', 'http://localhost:4200'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ["Content-Type", "Authorization", "origin", "x-csrf-token"],
+    optionsSuccessStatus: 204,
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  }),
+)
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))

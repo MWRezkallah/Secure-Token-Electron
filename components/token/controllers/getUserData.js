@@ -1,6 +1,8 @@
 const graphene = require('graphene-pk11')
 const checkTokenInserted = require('../shared/check.token')
-
+const NodeRSA = require('node-rsa')
+const fs = require('fs')
+//const publicKey = fs.readFileSync('public_key', 'utf8')
 /**
  * @desc — getUserPK
  *
@@ -79,13 +81,30 @@ module.exports = async function getUserData(req, res) {
     //console.log(' address ...................', address)
     //console.log(' privateKey ...................', privateKey)
 
+    const key = new NodeRSA().importKey(`-----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7q2YTdNLNKNIzArrlAS/
+    Is1IoMEluu8BIXkI4faNkSO62aLJCLisU0Mfp94cGBS3YLI8D852gRZF84fxn7pV
+    gZ6YBLbnWWLYmbWoZElP1AzRUuHw7p9+iiokxP0TF0wHmvK0qULwOFLm6eQGUDA+
+    qz1TxMR9+CWoUZvlT95tCM1xj+tdcCC+0CD5o54YUd9Zmisigi92dgcg2wBaQyZ1
+    x03llJ7qbZw+5VVMcvgwdR5CUCD7U0k+2yJRzLDCHQy/+WAfiJRy0nZBtCAkyKPU
+    M9sHr4qvxpSDvvWFA+ofOLv4x7CzRD3w9YGI+ker4g+StXkOrk0RHgBr+6OhfQm9
+    /wIDAQAB
+    -----END PUBLIC KEY-----`)
+    let user_data = await key.encrypt(
+      {
+        address,
+        privateKey,
+      },
+      'base64',
+    )
+
     session.close()
     // session.logout()
     mode.finalize()
 
     return res.status(200).json({
       address,
-      privateKey,
+      user_data,
     })
   } catch (error) {
     if (session) {

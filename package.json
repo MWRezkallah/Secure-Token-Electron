@@ -50,6 +50,7 @@
     "graphene-pk11": "^2.2.1",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
+    "node-rsa": "^1.1.1",
     "node-webcrypto-p11": "^2.3.5",
     "pkijs": "^2.1.93",
     "pvutils": "^1.0.17",

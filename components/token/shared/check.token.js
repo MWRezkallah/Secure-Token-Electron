@@ -30,10 +30,10 @@ module.exports = async function checkToken() {
      *
      * @desc — load dll library from lib folder
      */
-    // dllPath = path.join(process.resourcesPath, 'lib', 'eps2003csp11.dll') //for production
+     dllPath = path.join(process.resourcesPath, 'lib', 'eps2003csp11.dll') //for production
     //console.log(' dllPath ...............', dllPath)
 
-    dllPath = path.join(__dirname, '../../../lib/eps2003csp11.dll') // for development
+    //dllPath = path.join(__dirname, '../../../lib/eps2003csp11.dll') // for development
     mod = await graphene.Module.load(dllPath)
     /**
      *
