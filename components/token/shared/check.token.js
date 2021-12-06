@@ -15,7 +15,7 @@ module.exports = async function checkToken() {
      *
      * @desc — check if token plugin or not using productId: 2055 && vendorId: 2414
      */
-    let device = await usbDetect.find(2414, 2055)
+    let device = await usbDetect.find()
     console.log(' device ...............', device)
     /**
      *
@@ -33,7 +33,7 @@ module.exports = async function checkToken() {
      dllPath = path.join(process.resourcesPath, 'lib', 'eps2003csp11.dll') //for production
     //console.log(' dllPath ...............', dllPath)
 
-    //dllPath = path.join(__dirname, '../../../lib/eps2003csp11.dll') // for development
+    // dllPath = path.join(__dirname, '../../../lib/eps2003csp11.dll') // for development
     mod = await graphene.Module.load(dllPath)
     /**
      *

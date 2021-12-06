@@ -1,6 +1,6 @@
 {
     "lib": {
-        "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+        "libPath": "lib\\eps2003csp11.dll"
     },
     "handle": {
         "type": "Buffer",
@@ -13,7 +13,7 @@
     },
     "session": {
         "lib": {
-            "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+            "libPath": "lib\\eps2003csp11.dll"
         },
         "handle": {
             "type": "Buffer",
@@ -26,7 +26,7 @@
         },
         "slot": {
             "lib": {
-                "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+                "libPath": "lib\\eps2003csp11.dll"
             },
             "handle": {
                 "type": "Buffer",
@@ -39,10 +39,10 @@
             },
             "module": {
                 "lib": {
-                    "libPath": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll"
+                    "libPath": "lib\\eps2003csp11.dll"
                 },
-                "libFile": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll",
-                "libName": "D:\\test_app\\arcosec\\desktop\\user\\lib\\eps2003csp11.dll",
+                "libFile": "lib\\eps2003csp11.dll",
+                "libName": "lib\\eps2003csp11.dll",
                 "cryptokiVersion": {
                     "major": 2,
                     "minor": 40

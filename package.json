@@ -52,21 +52,23 @@
     "node-fetch": "^2.6.1",
     "node-rsa": "^1.1.1",
     "node-webcrypto-p11": "^2.3.5",
+    "pkcs11js": "^1.2.6",
     "pkijs": "^2.1.93",
     "pvutils": "^1.0.17",
-    "usb-detection": "^4.10.0"
+    "usb-detection": "^4.13.0"
   },
   "devDependencies": {
     "@bitdisaster/exe-icon-extractor": "^1.0.10",
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-wix": "^6.0.0-beta.54",
-    "electron": "^11.0.3",
+    "electron": "^11.5.0",
     "electron-builder": "^22.9.1",
     "electron-builder-squirrel-windows": "^22.10.4",
     "electron-packager": "^15.2.0",
     "electron-rebuild": "^2.3.2",
     "electron-wix-msi": "^3.0.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "typescript": "^4.5.2"
   }
 }
