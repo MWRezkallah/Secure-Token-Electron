@@ -12,7 +12,7 @@ module.exports = async function checkTokenApi(req, res) {
     if (!inserted) {
       return res
         .status(201)
-        .json({ message: 'device not insertd', inserted: false })
+        .json({ message: 'device not insertd', m:message, inserted: false })
     }
     return res.status(200).json({ message: 'device insertd', inserted: true })
   } catch (error) {

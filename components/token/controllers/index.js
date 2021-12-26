@@ -8,6 +8,8 @@ const getUserPKAndAddress = require('./token.getPkAndAddress')
 const getUserData = require('./getUserData')
 const setInToken = require('./setInToken')
 const clearTokenData = require('./clear.token.data')
+const setManager = require("./setManager")
+const getManager = require("./getManager")
 
 module.exports = {
   login,
@@ -20,4 +22,6 @@ module.exports = {
   getUserData,
   setInToken,
   clearTokenData,
+  setManager,
+  getManager
 }

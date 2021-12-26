@@ -9,7 +9,9 @@ const {
   getAddress,
   getUserPKAndAddress,
   setInToken,
-  clearTokenData
+  clearTokenData,
+  setManager,
+  getManager
 } = require('./controllers')
 
 const router = express.Router()
@@ -24,6 +26,8 @@ router.post('/token/get-address', getAddress)
 router.post('token/get-pk-and-address', getUserPKAndAddress)
 router.post('/token/set-user-token', setInToken)
 router.post('/token/clear-token-data', clearTokenData)
+router.post("/token/set-manager", setManager)
+router.post("/token/get-manager", getManager)
 
 
 module.exports = router
