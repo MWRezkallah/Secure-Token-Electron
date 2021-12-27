@@ -11,7 +11,7 @@ const path = require('path')
     shortcutFolderName: 'userDriver',
     shortcutName: 'userDriver',
     programFilesFolderName: 'userDriver',
-    manufacturer: 'Abdalah',
+    manufacturer: 'Mina Rezkallah',
     version: '1.0.0',
     appIconPath: path.resolve('./assets/img/login.ico'),
     outputDirectory: path.resolve('./app-exe'),

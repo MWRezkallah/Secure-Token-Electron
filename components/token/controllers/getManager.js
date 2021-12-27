@@ -17,7 +17,7 @@ module.exports = async function getManager(req, res) {
      *
      * @desc — get pin from req.body
      */
-    let { pin } = req.body
+    let { pin , application="MohamedHesham" } = req.body
     /**
      *
      * @desc — check if not pin return error
@@ -59,7 +59,7 @@ module.exports = async function getManager(req, res) {
     let isecSession = session
       .find({
         application: 'isec',
-        label: 'data.MohamedHesham',
+        label: `data.${application}`,
       })
       .items(0)
       .toType()

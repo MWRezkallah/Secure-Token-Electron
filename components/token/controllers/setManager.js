@@ -14,7 +14,7 @@ module.exports = async function setManager(req, res) {
      *
      * @desc — get pin from req.body
      */
-    let { pin, data={"name":"Mina Rezkallah"}} = req.body
+    let { pin, data={"name":"Mina Rezkallah"}, application="MohamedHesham"} = req.body
     console.log("======> data",data)
     /**
      *
@@ -61,7 +61,7 @@ module.exports = async function setManager(req, res) {
     var oldisecSession = session
             .find({
             application: 'isec',
-            label: 'data.MohamedHesham',
+            label: `data.${application}`,
             })
             .items(0)
             .toType()
@@ -73,7 +73,7 @@ module.exports = async function setManager(req, res) {
     }
     const addressObject = session.create({
       class: graphene.ObjectClass.DATA,
-      label: 'data.MohamedHesham',
+      label: `data.${application}`,
       id: Buffer.from([1, 2, 3, 4, 5]),
       application: 'isec',
       token: true,
@@ -85,7 +85,7 @@ module.exports = async function setManager(req, res) {
       var isecSession = session
         .find({
           application: 'isec',
-          label: 'data.MohamedHesham',
+          label: `data.${application}`,
         })
         .items(0)
         .toType()
