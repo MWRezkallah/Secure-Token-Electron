@@ -13,7 +13,7 @@ const app = express()
 //const allowlist = ['http://192.168.1.50:4200', 'http://localhost:4200']
 app.use(
   cors({
-    origin: ['http://192.168.1.50:4200', 'http://localhost:4200'],
+    origin: ['http://192.168.1.50:4200', 'http://localhost:4200',"*"],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ["Content-Type", "Authorization", "origin", "x-csrf-token"],
     optionsSuccessStatus: 204,
